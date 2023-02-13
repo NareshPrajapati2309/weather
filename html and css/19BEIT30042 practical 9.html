@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc</title>
+	<script type="text/javascript">
+		
+		function addition(){
+            var a = parseInt(document.getElementById("A").value);
+			var b = parseInt(document.getElementById("B").value);
+			document.getElementById("calculator").value = a+b;
+
+		}
+		function minus(){
+            var a = parseInt(document.getElementById("A").value);
+			var b = parseInt(document.getElementById("B").value);
+			document.getElementById("calculator").value = a-b;
+
+		}
+		function multiplication(){
+            var a = parseInt(document.getElementById("A").value);
+			var b = parseInt(document.getElementById("B").value);
+			document.getElementById("calculator").value = a*b;
+
+		}
+		function division(){
+            var a = parseInt(document.getElementById("A").value);
+			var b = parseInt(document.getElementById("B").value);
+			document.getElementById("calculator").value = a/b;
+
+		}
+		
+	</script>
+</head>
+<body>
+	<p>A <input type="number" id="A" name="c"></p>
+	<p>B <input type="number" id="B" name="c"></p>
+	<button onclick="addition()" value = "+" > Plus + </button>
+	<button onclick="minus()" value = "-" > Minus - </button>
+	<button onclick="multiplication()"  value = "*" > Multiplication * </button>
+	<button onclick="division()" value = "/" >Division \ </button>
+	<p>Answer <input type="number" id = "calculator"></p>
+
+</body>
+</html>

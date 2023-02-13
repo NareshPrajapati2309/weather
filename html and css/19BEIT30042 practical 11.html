@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+		function getData(){
+			var name = "Name = " + this.name();
+			var Email = "Email = " + this.email();
+			var mobileNumber = "Mobile Number = " + this.mno();
+			var gender = "Gender = " +  this.gender();
+			var favColor = "Favourite colour = " + this.fcolor();
+			var ans = name + "\n" + Email  + "\n" + mobileNumber + "\n" + gender  + "\n" + favColor;
+			document.getElementById("details").value = ans;
+		}	
+
+		function name(){ 
+			return document.getElementById("uname").value;
+		}
+		function email(){
+			return document.getElementById("email").value;
+		}
+		function mno(){
+			return document.getElementById("mno").value;
+		}
+		function gender(){
+			var temp = document.getElementsByName("gender");
+			console.log(temp);
+			var d;
+			for(var i = 0; i < temp.length; i++){
+    			if(temp[i].checked)
+      			  d = temp[i].value;
+ 			}
+ 			return d;
+ 			
+		}
+		function fcolor(){
+			return document.getElementById("fcolor").value;
+		}
+	</script>
+</head>
+<body>
+	<p>Name:<input type="text" name="uname" id="uname"></p>
+	<p>Email:<input type="email" name="Email" id="email"></p>
+	<p>Mobile number:<input type="number" name="Mno" id="mno"></p>
+	<p>Gender:
+			Male<input type="radio" name="gender" value="Male" id="gender">
+			Female<input type="radio" name="gender" value="Female" id="gender"></p>
+
+	<p>Favourite colour:<input type="text" name="color" id="fcolor"></p>
+	<p><button onclick="getData()">OK</button></p>
+	<p>Details:<textarea rows="10" id="details"></textarea></p>
+
+</body>
+</html>

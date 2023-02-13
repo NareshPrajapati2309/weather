@@ -1,0 +1,25 @@
+body{
+	color:white;
+	background-color: blue;
+
+	
+}
+
+h2{
+	color:white;
+	background-color: black;
+	width: 400px;
+}
+table{
+	border: 8px double white;
+	
+
+
+}
+td{
+	border: 3px solid white;
+}
+	
+th{
+	border: 3px solid white;	
+}

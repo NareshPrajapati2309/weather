@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">̥
+    <title>Images Rotate </title>
+</head>
+
+<body>
+    <img src="Naresh.jpg" id="1"><br />
+    <input type="button" value="start" id="start" onclick="javascript:return startRotation();">
+    <input type="button" value="stop" id="stop" onclick="javascript:return stopRotation();">
+</body>
+<script type="text/javascript">
+    var images=["Vivek.jpeg","Stadium.jpeg","Adalaj.jpeg" , "Naresh 1.jpg" , "Naresh.jpg"];
+    var x;
+    var i=1;
+    function startRotation()
+    {
+        x=setInterval("rotateImage()",3000);
+    }
+    function rotateImage()
+    {
+        document.getElementById("1").src=images[i];
+        i++;
+        if(i == 4)
+            i=0;
+    }
+    function stopRotation()
+    {
+        clearInterval(x);
+    }
+
+
+</script>
+
+</html>
